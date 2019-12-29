@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<!-- <div class="slidecontainer">
+  <p>Default range slider:</p>
+  <input type="range" min="1" max="100" value="50">
+  
+  <p>Custom range slider:</p>
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+ -->
+
+<div class="container" style="margin-top: 50px;">
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="empty" > 
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4>Uploaded Image</h4>
+          
+        </div>
+        <div class="panel-body" align="center">
+          <div class="pre">
+            <img id="output" width="400px" height="150px">
+          </div>
+        </div>
+        <div class="panel-footer">
+         <small>Vishwas Lodhi</small>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div> 
+<div class="row">
+  <div class="col-md-4">
+    <input type="file" name="img_name" accept="image/*" onchange="loadimg(event)" id="img_name">
+  </div>
+  <div class="col-md-8">
+    <input type="range" name="thresold" min="0" max="255" id="thresold" class="slider">
+    <p>Range: <small id="val"></small></p>
+  </div>
+  
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <input type="text" name="result" value="50" disabled="disabled" class="form-control">
+  </div>
+  <div class="col-md-8">
+    <input type="submit" name="submit" class="btn btn-sm btn-success" id="submit">
+  </div>
+  
+</div> 
+</div>
+<script type="text/javascript">
+  var slider = document.getElementById("thresold");
+var output = document.getElementById("val");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+var loadimg = function(event){
+  var image1 = document.getElementById('output');
+  image1.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+</body>
+</html>
