@@ -1,6 +1,6 @@
 # Gao-Gao-Technique-laaye-with-plant-Disease-Prediction
 
-For the Enhance the income of Villagers we design a web application & Android App 
+For Enhance the income of Villagers we design a web application & Android App 
 
 Link for web application http://118.185.43.122/0187cs161125/CVA2019/
 
