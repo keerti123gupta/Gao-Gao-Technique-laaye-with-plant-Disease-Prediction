@@ -4,7 +4,8 @@ For the Enhance the income of Villagers we design a web application & Android Ap
 
 Link for web application http://118.185.43.122/0187cs161125/CVA2019/
 
-Now Plant Disease Predction with their corresponding Pesticides & Fertilizers upload on this System
-Steps for Plant disease:-
+For Plant Disease Predction with their corresponding Pesticides & Fertilizers uploaded on this Repository.
+
+Follow these Steps for Plant disease:-
   1. run Training.py for create Nural Network Model
-  2. Now run Server.py for Predction & Recommend Pesticides/Fertilizers.
+  2. Now run Server.py for check planrt disease & their recommended Pesticides/Fertilizers.
